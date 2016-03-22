@@ -77,6 +77,14 @@ class Redis extends CodeceptionModule
     {
         $this->cleanup();
     }
+    
+    /**
+     * Delete a specific key from the Redis database
+     */
+    public function deleteKeyFromRedis($key)
+    {
+        $this->driver->delete($key);
+    }
 
     protected function cleanup()
     {
